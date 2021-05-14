@@ -1,0 +1,9 @@
+name: jenkinsdemo
+connection:
+  type: postgres
+  host: localhost
+  port: '5432'
+  username: env_var(POSTGRES_USERNAME)
+  password: env_var(POSTGRES_PASSWORD)
+  database: sodademo1
+  schema: public
