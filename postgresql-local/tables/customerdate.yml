@@ -1,0 +1,29 @@
+table_name: customerdate
+filter: "date = DATE '{{ date }}'"
+samples:
+  table_limit: 50
+  failed_limit: 50
+metrics:
+  - row_count
+  - missing_count
+  - missing_percentage
+  - values_count
+  - values_percentage
+  - valid_count
+  - valid_percentage
+  - invalid_count
+  - invalid_percentage
+  - min
+  - max
+tests:
+  - row_count > 0
+columns:
+  id:
+    valid_format: uuid
+    tests:
+      - invalid_percentage == 0
+  customerid:
+    valid_format: uuid
+    tests:
+      - invalid_percentage == 0
+      - missing_count == 0
