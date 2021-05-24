@@ -3,6 +3,7 @@ startdate=2021-05-20
 #Provide a valid startdate
 enddate=2021-05-23
 
+
 sDateTs=`date -j -f "%Y-%m-%d" $startdate "+%s"`
 eDateTs=`date -j -f "%Y-%m-%d" $enddate "+%s"`
 dateTs=$sDateTs

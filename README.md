@@ -11,4 +11,8 @@ sh ../analyze-scan-all-tables.sh
 ```
 
 ## Run a scan based on a date partition
-This script will run scans for each date between a start date and an enddate for each data in that range a scan will be triggered with a filter that will on that date. Then the result is sent to Soda Cloud in a way that it looks like the scan was executed on that day.
+This script will run scans for each date between a start date and an end date for each data in that range a scan will be triggered with a filter that will on that date. Then the result is sent to Soda Cloud in a way that it looks like the scan was executed on that day.
+
+```
+sh run_scan_per_date.sh
+```
